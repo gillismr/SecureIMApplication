@@ -13,6 +13,10 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class SIMClient{
 
+	//Git test, delete this comment later
+	
+	
+	
 	//Fields for server connection configuration
 	Scanner sc;
 	String serverIP;
