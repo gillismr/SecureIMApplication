@@ -1,0 +1,11 @@
+
+I combined the chat client solution with the one that you did to create this secure client.
+ The chat server is that of the solution with minor modifications.
+
+It works poorly at best:
+Occasionally, the server will accept one line read from the client, and return it. the rest of the time, the server does not accept info.
+
+My goal:
+To get the clients working before implementing the security aspect.
+
+===========Uploading 3:35 PM =============

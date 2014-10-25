@@ -1,0 +1,26 @@
+BACKGROUND:
+Client reads server connection information (IP, ports, etc) from a configuration file (public key)
+Upon starting, client immediately attempts to connect to the server
+User is prompted at startup for username/password
+Server holds a table of username/ password-hashes, and their online status (on/off)
+	Server reads from a configuration file
+		Writes to file when changing status:
+			Perhaps server stores UNAME | PWD-HASH | ROW | STATUS (online/offline)
+			(I understand poorly the file.write in java, added "row" to make easy .write())
+			Then changes the last bit.
+
+PRESENT:
+User opens client
+Client reads from the configuration file
+Client immediately attempts to connect to server
+Server requests username + password
+Note: username should be max 16bits or something, password 8 bits. so we can just compare
+	uname+passwdhash to the first 16+8 bits in the server tables.
+Server verifies the username+password combo 
+	If good, then		
+		1.) toggle "on" for this user
+		2.) allow user the privilege to use "list" And "send USER MESSAGE"
+	Else, return exception "incorrect combo"
+If a user is online, allow send to them.
+	(Still thinking about the send protocol)…
+	Will get back to you on this one
